@@ -1,3 +1,19 @@
 header {
-    background-color: #527c647a;
+    background-color: #FFFFFF;
+}
+nav li{
+    list-style: none;
+    display: inline-block;
+}
+nav a:link, nav a:visited {
+    background-color: #CCCCCC;
+    color: #0D0D0D;
+    padding: 14px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+#logo{
+    height: 200px;
+    width: 200px;
 }
