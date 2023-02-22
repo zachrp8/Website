@@ -4,6 +4,8 @@ header {
 nav li{
     list-style: none;
     display: inline-block;
+    margin: 0;
+    padding: 0;
 }
 nav a:link, nav a:visited {
     background-color: #CCCCCC;
@@ -11,7 +13,7 @@ nav a:link, nav a:visited {
     padding: 14px 20px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: block;
 }
 #logo{
     height: 200px;
