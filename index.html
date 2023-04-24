@@ -5,24 +5,23 @@
     <link rel="stylesheet" href="styles.css">
     <title>Marywood IMACS</title>
 </head>
-<body>
-    <script scr="main.js"></script>
+<body onload="load()">
+    <script src="main.js"></script>
     <header>
-        <figure>
-            <a href="#home"><img src="images/MarywoodLogo.png" id="logo"></a>
-        </figure>
+        
         <nav>
-            <!--hamburger menu goes here
+            <a href="#home" class="active"><img src="images/MarywoodLogo.png" id="logo"></a>
+             <!--hamburger menu goes here
             for now just the links are fine-->
-            <ul id="myLinks">
-                <li><a href="">About</a></li>
-                <li><a href="">Math Contest</a></li>
-                <li><a href="">Tutorials</a></li>
-                <li><a href="">Members</a></li>
-                <li><a href="">News</a></li>
-                <li><a href="">FAQs</a></li>
-            </ul>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <div id="myLinks">
+                <a href="">About</a></li>
+                <a href="">Math Contest</a></li>
+                <a href="">Tutorials</a></li>
+                <a href="">Members</a></li>
+                <a href="">News</a></li>
+                <a href="">FAQs</a></li>
+            </div>
+            <a href="#" class="icon" id="menuButton">
                 <i class="fa fa-bars"></i>
             </a>
         </nav>
