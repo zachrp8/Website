@@ -7,25 +7,31 @@
 </head>
 <body onload="load()">
     <script src="main.js"></script>
-    <header>
-        
-        <nav>
+    <div class="overlay"></div>
+        <header>
             <a href="#home" class="active"><img src="images/MarywoodLogo.png" id="logo"></a>
-             <!--hamburger menu goes here
-            for now just the links are fine-->
-            <div id="myLinks">
-                <a href="">About</a></li>
-                <a href="">Math Contest</a></li>
-                <a href="">Tutorials</a></li>
-                <a href="">Members</a></li>
-                <a href="">News</a></li>
-                <a href="">FAQs</a></li>
-            </div>
-            <a href="#" class="icon" id="menuButton">
-                <i class="fa fa-bars"></i>
-            </a>
-        </nav>
-    </header>
+            <nav id="main-menu">
+                <ul>
+                  <li><a href="#">Math Contest</a></li>
+                  <li><a href="#">Resources</a></li>
+                  <li><a href="#">Our Team</a></li>
+                  <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+            <input type="checkbox" id="hamburger-box" class="menu-shower">
+            <label id="hamburger-menu" for="hamburger-box">
+              <nav id="sidebar-menu">
+                <h3>IMACS</h3>
+                <ul>
+                    <li><a href="#">Math Contest</a></li>
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="#">Our Team</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+              </nav>
+            </label>
+        </header>
     <main>
         <!--Group Picture and Tiles go here-->
     </main>
