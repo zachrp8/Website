@@ -2,15 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Marywood IMACS</title>
 </head>
-<body onload="load()">
+<body>
     <script src="main.js"></script>
     <div class="menu-overlay"></div>
-        <header>
-            <a href="#home" class="active"><img src="images/MarywoodLogo.png" id="logo"></a>
-            <nav id="main-menu">
+        <header class="fixed">
+            <div><a href="#home" class="active"><img src="images/marywood-logos.png" id="logo"></a> </div>
+            <nav id="main-menu" class="bold">
                 <ul>
                   <li><a href="#">Math Contest</a></li>
                   <li><a href="#">Resources</a></li>
@@ -21,7 +22,7 @@
             </nav>
             <input type="checkbox" id="hamburger-box" class="menu-shower"></div>
             <label id="hamburger-menu" for="hamburger-box">
-                <nav id="sidebar-menu">
+                <nav id="sidebar-menu" class="bold">
                     <ul>
                         <li><a href="#">Math Contest</a></li>
                         <li><a href="#">Resources</a></li>
@@ -33,9 +34,27 @@
             </label>
         </header>
     <main>
+        <div id="club-description">
+            <h3>Marywood University Integrated Math and Computer Science Club</h3>
+            <p>Providing an opportunity for students to bond through challenges and ultimately to further their interests of Mathematics and Computer Science.</p>
+        </div>
         <!--Group Picture and Tiles go here-->
-        
+        <div id="class-picture"></div>
+        <div id="box-slides">
+            <div id="box1"></div>
+            <div id="box2"></div>
+            <div id="box3"></div>
+            <div id="box4"></div>
+        </div>
     </main>
-    <footer></footer>
-</body>
+    <footer>
+        <div>
+            placeholder for logo
+        </div>
+        <div>
+            icon links to social media
+        </div>
+        © Marywood University IMACS Club 2023
+    </footer>
+</body> 
 </html>
