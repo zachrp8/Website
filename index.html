@@ -8,11 +8,11 @@
 </head>
 <body>
     <script src="main.js"></script>
-    <div class="menu-overlay"></div>
-        <header class="fixed">
+    <div class="menu-overlay fixed"></div>
+        <header class="flex fixed justify-between">
             <div><a href="#home" class="active"><img src="images/marywood-logos.png" id="logo"></a> </div>
-            <nav id="main-menu" class="bold">
-                <ul>
+            <nav id="main-menu" class="none bold">
+                <ul class="flex justify-end">
                   <li><a href="#">Math Contest</a></li>
                   <li><a href="#">Resources</a></li>
                   <li><a href="#">Our Team</a></li>
@@ -21,7 +21,7 @@
                 </ul>
             </nav>
             <input type="checkbox" id="hamburger-box" class="menu-shower"></div>
-            <label id="hamburger-menu" for="hamburger-box">
+            <label id="hamburger-menu" for="hamburger-box" class="fixed">
                 <nav id="sidebar-menu" class="bold">
                     <ul>
                         <li><a href="#">Math Contest</a></li>
@@ -34,9 +34,12 @@
             </label>
         </header>
     <main>
-        <div id="club-description">
-            <h3>Marywood University Integrated Math and Computer Science Club</h3>
-            <p>Providing an opportunity for students to bond through challenges and ultimately to further their interests of Mathematics and Computer Science.</p>
+        <div id="club-description" class="flex align-center media-large-ht">
+            <div id="text-description" class="pos-rel mx-32">
+                <h3 class="text-xxl mb-0 mt-0">Integrated Math and Computer Science Club</h3>
+                <p class="text-xl mb-0 mt-0">Providing an opportunity for students to bond through challenges and ultimately to further their interests of Mathematics and Computer Science.</p>
+            </div>
+            <figure id="club-activity" class="none media-large pos-rel"><img id="activity-photo" src="./images/pexels-cottonbro-studio-5184956.jpg" ><!-- Photo by cottonbro studio: https://www.pexels.com/photo/blank-pages-of-a-notebook-5184956/ --></figure>
         </div>
         <!--Group Picture and Tiles go here-->
         <div id="class-picture"></div>
@@ -47,7 +50,7 @@
             <div id="box4"></div>
         </div>
     </main>
-    <footer>
+    <footer class="flex pos-rel justify-center align-center">
         <div>
             placeholder for logo
         </div>
