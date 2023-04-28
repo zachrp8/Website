@@ -189,19 +189,20 @@ main {
 #club-description {
     background-image: url(./images/pexels-scott-webb-2824173.webp);/*Photo by Scott Webb: https://www.pexels.com/photo/white-and-grey-surface-2824173/*/
     background-size: cover;
-}
+    height: 100vh;
+}/*
 #image-track {
     display: flex;
     gap: 4vmin;
     transform: translate(0%, -50%); 
-    user-select: none; /* -- Prevent image highlighting -- */
+    user-select: none;  -- Prevent image highlighting -- 
 }
 #image-track > .image {
     width: 40vmin;
     height: 56vmin;
     object-fit: cover;
     object-position: 100% center;
-}  
+}  */
 footer {
     background-color: #011341;
     color: #f0f0f0;
