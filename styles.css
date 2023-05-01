@@ -204,19 +204,7 @@ main {
     height: 90%;
     width: auto; 
     padding: 20px; 
-}/*
-#image-track {
-    display: flex;
-    gap: 4vmin;
-    transform: translate(0%, -50%); 
-    user-select: none;  -- Prevent image highlighting -- 
 }
-#image-track > .image {
-    width: 40vmin;
-    height: 56vmin;
-    object-fit: cover;
-    object-position: 100% center;
-}  */
 #hook {
     padding: 20px 20px 20px 20px;
     outline: auto;
