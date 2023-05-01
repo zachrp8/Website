@@ -8,7 +8,7 @@ body {
     font-size: 20px;
     padding: 0px;
     margin: 0px;
-    min-height: 200vh;
+    min-height: 150vh;
     overflow-x: hidden;
 }
 header {
@@ -69,6 +69,9 @@ header {
 .text-xxl{
    font-size: 2.25rem;
 }
+.text-xxxl{
+    font-size: 3rem;
+}
 .pos-rel {
     position: relative;
 }
@@ -97,7 +100,7 @@ header {
     align-items: center;
     z-index: 9; /* always on top essentially*/
 }
-#main-menu li { /* get rid of the styling on the list*/
+li { /* get rid of the styling on the list*/
     list-style-type: none;
     font-size: 2rem; /* font relative to the root size of 20px  */
 }
@@ -176,8 +179,11 @@ header {
         display: block;
     }
     .media-large-ht {
-        height: 75vh;
-}
+        height: 100vh;
+    }
+    #hook{
+        justify-content: space-between;
+    }
 }
 main {
     padding-top: 100px;
@@ -189,7 +195,15 @@ main {
 #club-description {
     background-image: url(./images/pexels-scott-webb-2824173.webp);/*Photo by Scott Webb: https://www.pexels.com/photo/white-and-grey-surface-2824173/*/
     background-size: cover;
-    height: 100vh;
+    height: 75vh;
+}
+.class-picture {
+    height: 400px;
+}
+#class-pic-image {
+    height: 90%;
+    width: auto; 
+    padding: 20px; 
 }/*
 #image-track {
     display: flex;
@@ -203,6 +217,17 @@ main {
     object-fit: cover;
     object-position: 100% center;
 }  */
+#hook {
+    padding: 20px 20px 20px 20px;
+    outline: auto;
+    flex-direction: row-reverse;
+}
+#blurb-q {
+    text-align: end;
+}
+#blurb {
+    padding: 0 0 0 0;
+}
 footer {
     background-color: #011341;
     color: #f0f0f0;
