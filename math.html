@@ -33,6 +33,30 @@
             </label>
         </header>
     <main>
+        <!-- form to sign up-->
+        <div class="flex align-center flex-col">
+            <div id="sign-up-header">
+                <h3>Math contest Sign Up</h3>
+                <p>Please provide your name, email, and grade. There is also a $5 registration fee. Please mail it to the Marywood Math and Computer Science Club.</p>
+            </div>
+            <form class="form">
+                <span class="title">Register</span>
+                <label for="name" class="label">Name</label>
+                <input type="text" id="name" name="name" required="" class="input">
+                <label for="email" class="label">Email</label>
+                <input type="email" id="email" name="email" required="" class="input">
+                <label for="school" class="label">School</label>
+                <input type="text" id="school" name="school" required="" class="input">
+                <label for="grade" class="label">Grade</label>
+                <select id="grade" name="grade">
+                    <option value="ninth">9th</option>
+                    <option value="tenth">10th</option>
+                    <option value="eleventh">11th</option>
+                    <option value="twelfth">12th</option>
+                  </select>
+                <button type="submit" class="submit">Register</button>
+            </form>
+        </div>
     </main>
     <footer class="flex pos-rel justify-center align-center">
         <div>
