@@ -329,6 +329,10 @@ main {
     border-radius: 0 3px 3px 0;
     user-select: none;
   }
+  .prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+  }
   .next {
     right: 0;
     border-radius: 3px 0 0 3px;
