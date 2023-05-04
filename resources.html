@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./stylesheets/styles.css">
     <title>Marywood IMACS</title>
+    <script src="main.js"></script>
 </head>
 <body>
     <div class="menu-overlay fixed"></div>
@@ -42,7 +43,11 @@
             icon links to social media
         </div>
         © Marywood University IMACS Club 2023
+        <label for="mode">Choose a theme:</label>
+        <select name="mode" id="mode" onchange="getStyles()">
+            <option value="./stylesheets/styles.css" selected="selected">Light Mode</option>
+            <option value="./stylesheets/dark.css">Dark Mode</option>
+        </select>
     </footer>
-    <script src="main.js"></script>
 </body> 
 </html>
