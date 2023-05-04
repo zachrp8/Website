@@ -144,7 +144,7 @@ li { /* get rid of the styling on the list*/
     border: none;
     padding: 0px;
     margin: 0px;
-    background-image: url(./images/icons8-menu.svg);
+    background-image: url(../images/icons8-menu.svg);
     background-repeat: no-repeat;
     background-size: contain;
 
@@ -216,7 +216,7 @@ main {
     height: auto;
 }
 #club-description {
-    background-image: url(./images/dark.webp);/*Photo by Scott Webb: https://www.pexels.com/photo/white-and-grey-surface-2824173/*/
+    background-image: url(../images/dark.webp);/*Photo by Scott Webb: https://www.pexels.com/photo/white-and-grey-surface-2824173/*/
     background-size: cover;
     height: 75vh;
 }
