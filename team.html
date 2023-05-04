@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylesheets/styles.css">
+    <title>Marywood IMACS</title>
+    <script src="main.js"></script>
+</head>
+<body>
+    <div class="menu-overlay fixed"></div>
+        <header class="flex fixed justify-between">
+            <div><a href="./index.html" class="active" draggable="false"><img src="images/marywood-logos.png" id="logo" draggable="false"></a> </div>
+            <nav id="main-menu" class="none bold">
+                <ul class="flex justify-end">
+                  <li><a href="./math.html">Math Contest</a></li>
+                  <li><a href="./resources.html">Resources</a></li>
+                  <li><a href="#">Our Team</a></li>
+                  <li><a href="./about.html">About</a></li>
+                  <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <input type="checkbox" id="hamburger-box" class="menu-shower"></div>
+            <label id="hamburger-menu" for="hamburger-box" class="fixed">
+                <nav id="sidebar-menu" class="bold">
+                    <ul>
+                        <li><a href="./math.html">Math Contest</a></li>
+                        <li><a href="./resources.html">Resources</a></li>
+                        <li><a href="./team.html">Our Team</a></li>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </label>
+        </header>
+    <main>
+        <div class="flex justify-center text-center" id="slider-team">
+            <div class="box">
+                <img src="./images/pres.webp" alt="Officers of IMACS">
+                <h3 class="text-xl">Todd Dotter</h3>
+                <p class="text-l">President</p>
+            </div>
+            <div class="box">
+                <img src="./images/vp.webp" alt="Officers of IMACS">
+                <h3 class="text-xl">Bethany </h3>
+                <p class="text-l">Vice President</p>
+            </div>
+            <div class="box">
+                <img src="./images/secr.webp" alt="Officers of IMACS">
+                <h3 class="text-xl">Ryan Coleman</h3>
+                <p class="text-l">Secretary</p>
+            </div>
+            <div class="box">
+                <img src="./images/tr.webp" alt="Officers of IMACS">
+                <h3 class="text-xl">Zach Parkhurst</h3>
+                <p class="text-l">Treasurer</p>
+            </div>
+            <div class="box">
+                <img src="./images/pr.webp" alt="Officers of IMACS">
+                <h3 class="text-xl">Margaret Breznay</h3>
+                <p class="text-l">Public Relations Officer</p>
+            </div>
+            <div class="box">
+                <img src="./images/rep.webp" alt="Officers of IMACS">
+                <h3 class="text-xl">Anonymous</h3>
+                <p class="text-l">Freshman Representative</p>
+            </div>
+            <div class="box">
+                <img src="./images/adv.webp" alt="Officers of IMACS">
+                <h3 class="text-xl">Dr. Adhikari</h3>
+                <p class="text-l">Advisor</p>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a> <!--character for button-->
+        </div>
+        <div class="text-center">
+            <span class="dot" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+
+        </div>
+        <script src="slides.js"></script>
+    </main>
+    <footer class="flex pos-rel justify-center align-center">
+        <div>
+            placeholder for logo
+        </div>
+        <div>
+            icon links to social media
+        </div>
+        © Marywood University IMACS Club 2023
+        <label for="mode">Choose a theme:</label>
+        <select name="mode" id="mode" onchange="getStyles()">
+            <option value="./stylesheets/styles.css" selected="selected">Light Mode</option>
+            <option value="./stylesheets/dark.css">Dark Mode</option>
+        </select>
+    </footer>
+</body> 
+</html>

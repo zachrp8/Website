@@ -2,40 +2,87 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylesheets/styles.css">
     <title>Marywood IMACS</title>
-</head>
-<body onload="load()">
     <script src="main.js"></script>
-    <div class="menu-overlay"></div>
-        <header>
-            <a href="#home" class="active"><img src="images/MarywoodLogo.png" id="logo"></a>
-            <nav id="main-menu">
-                <ul>
-                  <li><a href="#">Math Contest</a></li>
-                  <li><a href="#">Resources</a></li>
-                  <li><a href="#">Our Team</a></li>
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Contact</a></li>
+</head>
+<body>
+    <div class="menu-overlay fixed"></div>
+        <header class="flex fixed justify-between">
+            <div><a href="#home" class="active" draggable="false"><img src="images/marywood-logos.png" id="logo" draggable="false"></a> </div>
+            <nav id="main-menu" class="none bold">
+                <ul class="flex justify-end">
+                  <li><a href="./math.html">Math Contest</a></li>
+                  <li><a href="./resources.html">Resources</a></li>
+                  <li><a href="./team.html">Our Team</a></li>
+                  <li><a href="./about.html">About</a></li>
+                  <li><a href="./contact.html">Contact</a></li>
                 </ul>
             </nav>
             <input type="checkbox" id="hamburger-box" class="menu-shower"></div>
-            <label id="hamburger-menu" for="hamburger-box">
-                <nav id="sidebar-menu">
+            <label id="hamburger-menu" for="hamburger-box" class="fixed">
+                <nav id="sidebar-menu" class="bold">
                     <ul>
-                        <li><a href="#">Math Contest</a></li>
-                        <li><a href="#">Resources</a></li>
-                        <li><a href="#">Our Team</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="./math.html">Math Contest</a></li>
+                        <li><a href="./resources.html">Resources</a></li>
+                        <li><a href="./team.html">Our Team</a></li>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
                     </ul>
                 </nav>
             </label>
         </header>
     <main>
+        <div id="club-description" class="flex align-center media-large-ht">
+            <div id="text-description" class="pos-rel mx-32">
+                <h3 class="text-xxl mb-0 mt-0">Integrated Math and Computer Science Club</h3>
+                <p class="text-xl mb-0 mt-0">Providing an opportunity for students to bond through challenges 
+                    and ultimately to further their interests of Mathematics and Computer Science.</p>
+            </div>
+            <figure id="club-activity" class="none media-large pos-rel"><img id="activity-photo" src="./images/pexels-cottonbro-studio-5184956.jpg" draggable="false"><!-- Photo by cottonbro studio: https://www.pexels.com/photo/blank-pages-of-a-notebook-5184956/ --></figure>
+        </div>
         <!--Group Picture and Tiles go here-->
-        
+        <div class = "class-picture justify-center flex">
+            <figure>
+                <img id="class-pic-image" src="./images/213826-marywood-university.webp">
+            </figure>
+        </div>
+        <div id="hook" class="flex justify-between">
+            <h2 class="text-xxl mb-0 mt-0" id="blurb-q">Get involved</h2>
+            <ul class="mb-0 mt-0" id="blurb">
+                <li class="text-xl mb-0 mt-0">Monthly Meetings</li>
+                <li class="text-xl mb-0 mt-0">Club Projects</li>
+                <li class="text-xl mb-0 mt-0">Tutoring</li>
+                <li class="text-xl mb-0 mt-0">Independent Projects</li>
+                <li class="text-xl mb-0 mt-0">And MORE!!!</li>
+            </ul>
+        </div>
+        <!-- takes too long to load currently will fix later 
+        <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+          <img class="image" src="./images/track1.jpg" draggable="false" /><!-- Photo by Athena: https://www.pexels.com/photo/black-and-gray-motherboard-2582937/ 
+          <img class="image" src="./images/track2.jpg" draggable="false" /><!-- Photo by Dan Cristian Pădureț: https://www.pexels.com/photo/blue-and-yellow-phone-modules-1476321/ 
+          <img class="image" src="./images/track3.jpg" draggable="false" /><!-- Photo by Christina Morillo: https://www.pexels.com/photo/person-using-both-computer-and-a-laptop-1181673/ 
+          <img class="image" src="./images/track4.jpg" draggable="false" /><!-- Photo by Miguel Á. Padriñán: https://www.pexels.com/photo/green-circuit-board-343457/ 
+          <img class="image" src="./images/track5.jpg" draggable="false" /><!-- Photo by TimSon Foox: https://www.pexels.com/photo/circuit-board-2182863/ 
+          <img class="image" src="./images/track6.jpg" draggable="false" /><!-- Photo by ThisIsEngineering: https://www.pexels.com/photo/person-using-gray-laptop-3861964/ 
+          <img class="image" src="./images/track7.jpg" draggable="false" /><!-- Photo by Ola Dapo: https://www.pexels.com/photo/man-wearing-black-headset-3345882/ 
+          <img class="image" src="./images/track8.jpg" draggable="false" /><!-- Photo by ThisIsEngineering: https://www.pexels.com/photo/man-in-black-shirt-sitting-in-front-of-computer-3861959/ 
+        </div> -->
     </main>
-    <footer></footer>
-</body>
+    <footer class="flex pos-rel justify-center align-center">
+        <div>
+            placeholder for logo
+        </div>
+        <div>
+            icon links to social media
+        </div>
+        © Marywood University IMACS Club 2023
+        <label for="mode">Choose a theme:</label>
+        <select name="mode" id="mode" onchange="getStyles()">
+            <option value="./stylesheets/styles.css" selected="selected">Light Mode</option>
+            <option value="./stylesheets/dark.css">Dark Mode</option>
+        </select>
+    </footer>
+</body> 
 </html>
