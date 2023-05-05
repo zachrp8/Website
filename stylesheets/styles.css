@@ -226,7 +226,6 @@ main {
 }
 #hook {
     padding: 20px 20px 20px 20px;
-    outline: auto;
     flex-direction: row-reverse;
 }
 #blurb-q {
@@ -324,6 +323,9 @@ main {
   .next {
     right: 0;
   }
+  .prev:hover, .next:hover {
+    color: #333;
+  }
   .dot {
     cursor: pointer;
     height: 15px;
@@ -344,4 +346,15 @@ footer {
     color: #f0f0f0;
     padding: 20px;
     flex-direction: column;
+}
+#randomizer {
+    padding: 7px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    background-color: #ddd;
+    transition: all .5s;
+    cursor: pointer;
+}
+#randomizer:active {
+    background-color: #878787;
 }
