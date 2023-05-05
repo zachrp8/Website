@@ -263,7 +263,7 @@ main {
   color: #1a202c;
 }
 .label {
-  color: rgb(0, 0, 0);
+  color: #000000;
   margin-bottom: 4px;
 }
 .input, #grade {
@@ -277,15 +277,12 @@ main {
   border-radius: 4px;
   transition: all 0.2s ease-in-out;
 }
+.input {
+    border: 2px solid rgba(74, 74, 74, 0.322);
+}
 .input:focus {
   background-color: #fff;
   box-shadow: 0 0 0 2px #cbd5e0;
-}
-.input:valid {
-  border: 1px solid green;
-}
-.input:invalid {
-  border: 1px solid rgba(14, 14, 14, 0.205);
 }
 .submit {
   background-color: #1a202c;
@@ -294,12 +291,10 @@ main {
   border-radius: 4px;
   padding: 10px 20px;
   font-size: 1.2rem;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
 } 
 /* team.html*/
 #slider-team  img {
-    width: 100%;
+    width: 80%;
     height: auto;
 }
 #slider-team {
@@ -315,7 +310,7 @@ main {
     position: absolute;
     top: 50%;
     width: auto;
-    margin-top: -22px;
+    margin-top: -20px;
     padding: 16px;
     color: #999;
     font-weight: bold;
@@ -325,11 +320,9 @@ main {
   }
   .prev {
     left: 0;
-    border-radius: 3px 0 0 3px;
   }
   .next {
     right: 0;
-    border-radius: 3px 0 0 3px;
   }
   .dot {
     cursor: pointer;
@@ -344,17 +337,7 @@ main {
   .active, .dot:hover {
     background-color: #717171;
   }
-  /* Fading animation */
-  .fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-  }
-  @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-  }
-
-/*footer
+  /*footer
 -------------------------------*/
 footer {
     background-color: #011341;
