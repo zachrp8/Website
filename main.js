@@ -16,10 +16,23 @@ function randomcolor() {
     const color4 = Math.floor(Math.random()*16777215).toString(16);
     document.getElementsByTagName("footer")[0].style.color= "#" + color4;
 }
-
 function validateForm() {
-    let inputs = document.getElementsByClassName("input");
+    const inputs = document.getElementsByClassName("input");
+    const error = document.getElementById("error-box");
+    let retVal=true;
     for (let i =0; i < inputs.length; i++) {
-        inputs[i].
+        if(inputs[i].value==""){
+            inputs[i].style.border="2px solid red";
+            error.innerHTML="Missing Info";
+            error.style.color="red";
+            retVal=false;
+        }
     }
+    if (!inputs[1].value.match("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+\.[a-zA-z]{2,3}$")){
+        error.innerHTML = "Invalid Email Format";
+        inputs[1].style.border="2px solid red";
+        error.style.color="red";
+        retVal=false;
+    }
+    return retVal;
 }
