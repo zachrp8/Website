@@ -67,11 +67,17 @@
             icon links to social media
         </div>
         © Marywood University IMACS Club 2023
-        <label for="mode">Choose a theme:</label>
-        <select name="mode" id="mode" onchange="getStyles()">
-            <option value="./stylesheets/styles.css" selected="selected">Light Mode</option>
-            <option value="./stylesheets/dark.css">Dark Mode</option>
-        </select>
+        <div class="flex">
+            <label for="mode">Choose a theme:</label>
+            <select name="mode" id="mode" onchange="getStyles()">
+                <option value="./stylesheets/styles.css" selected="selected">Light Mode</option>
+                <option value="./stylesheets/dark.css">Dark Mode</option>
+            </select>
+        </div>
+        <div class="flex align-center">
+            <p>Random Colors: </p>
+            <button id="randomizer" onclick="randomcolor()">Rainbow</button>
+        </div>
     </footer>
 </body> 
 </html>

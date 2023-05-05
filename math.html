@@ -46,11 +46,11 @@
             <form class="form">
                 <span class="title">Register</span>
                 <label for="name" class="label">Name</label>
-                <input type="text" id="name" name="name" required="" class="input">
+                <input type="text" id="name" name="name" required = "" class="input">
                 <label for="email" class="label">Email</label>
-                <input type="email" id="email" name="email" required="" class="input">
+                <input type="email" id="email" name="email" class="input">
                 <label for="school" class="label">School</label>
-                <input type="text" id="school" name="school" required="" class="input">
+                <input type="text" id="school" name="school" class="input">
                 <label for="grade" class="label">Grade</label>
                 <select id="grade" name="grade">
                     <option value="ninth">9th</option>
@@ -70,11 +70,17 @@
             icon links to social media
         </div>
         © Marywood University IMACS Club 2023
-        <label for="mode">Choose a theme:</label>
-        <select name="mode" id="mode" onchange="getStyles()">
-            <option value="./stylesheets/styles.css" selected="selected">Light Mode</option>
-            <option value="./stylesheets/dark.css">Dark Mode</option>
-        </select>
+        <div class="flex">
+            <label for="mode">Choose a theme:</label>
+            <select name="mode" id="mode" onchange="getStyles()">
+                <option value="./stylesheets/styles.css" selected="selected">Light Mode</option>
+                <option value="./stylesheets/dark.css">Dark Mode</option>
+            </select>
+        </div>
+        <div class="flex align-center">
+            <p>Random Colors: </p>
+            <button id="randomizer" onclick="randomcolor()">Rainbow</button>
+        </div>
     </footer>
 </body> 
 </html>
