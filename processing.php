@@ -7,7 +7,7 @@
     <script src="main.js"></script>
     <title>Marywood IMACS</title>
 </head>
-<body>
+<body onload="load()">
     <div class="menu-overlay fixed"></div>
         <header class="flex fixed justify-between">
             <div><a href="./index.html" class="active" draggable="false"><img src="images/marywood-logos.png" id="logo" draggable="false"></a> </div>

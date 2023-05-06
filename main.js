@@ -3,6 +3,11 @@ function getStyles() {
     let y = document.getElementsByTagName("link")[0];
     let cssStyle= x.value;
     y.setAttribute("href", cssStyle);
+    if(cssStyle=== "./stylesheets/dark.css"){
+        localStorage.setItem("isDarkMode", true)
+    } else {
+        localStorage.setItem("isDarkMode", false)
+    }
 }
 function randomcolor() {
     const color = Math.floor(Math.random()*16777215).toString(16);
@@ -35,4 +40,19 @@ function validateForm() {
         retVal=false;
     }
     return retVal;
+}
+function load() {
+    let dark = false;
+    if (typeof(Storage) !== "undefined") {
+        if (localStorage.getItem("isDarkMode") !== null){
+            dark = localStorage.getItem("isDarkMode");
+        }               
+    }
+    if (dark) {
+        var y = document.getElementsByTagName("link")[0];
+        y.setAttribute("href", "./stylesheets/dark.css")
+    }
+    else {
+        y.setAttribute("href", "./stylesheets/styles.css")
+    }
 }
