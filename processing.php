@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./stylesheets/styles.css">
-    <title>Marywood IMACS</title>
     <script src="main.js"></script>
+    <title>Marywood IMACS</title>
 </head>
 <body>
     <div class="menu-overlay fixed"></div>
@@ -13,7 +13,7 @@
             <div><a href="./index.html" class="active" draggable="false"><img src="images/marywood-logos.png" id="logo" draggable="false"></a> </div>
             <nav id="main-menu" class="none bold">
                 <ul class="flex justify-end">
-                  <li><a href="#">Math Contest</a></li>
+                  <li><a href="./math.html">Math Contest</a></li>
                   <li><a href="./resources.html">Resources</a></li>
                   <li><a href="./team.html">Our Team</a></li>
                   <li><a href="./about.html">About</a></li>
@@ -24,7 +24,7 @@
             <label id="hamburger-menu" for="hamburger-box" class="fixed">
                 <nav id="sidebar-menu" class="bold">
                     <ul>
-                        <li><a href="#">Math Contest</a></li>
+                        <li><a href="./math.html">Math Contest</a></li>
                         <li><a href="./resources.html">Resources</a></li>
                         <li><a href="./team.html">Our Team</a></li>
                         <li><a href="./about.html">About</a></li>
@@ -34,33 +34,27 @@
             </label>
         </header>
     <main>
-        <div>
-            <h3></h3>
-        </div>
-        <!-- form to sign up-->
-        <div class="flex align-center flex-col">
-            <div id="sign-up-header">
-                <h3>Math contest Sign Up</h3>
-                <p>Please provide your name, email, and grade. There is also a $5 registration fee. Please mail it to the Marywood Math and Computer Science Club.</p>
-            </div>
-            <div id="error-box"></div>
-            <form id="form" action="processing.php" method="post" onsubmit="return validateForm()">
-                <span id="title">Register</span>
-                <label for="name" class="label">Name</label>
-                <input type="text" id="name" name="name" required="" class="input">
-                <label for="email" class="label">Email</label>
-                <input type="text" id="email" name="email" class="input">
-                <label for="school" class="label">School</label>
-                <input type="text" id="school" name="school" class="input">
-                <label for="grade" class="label">Grade</label>
-                <select id="grade" name="grade">
-                    <option value="ninth">9th</option>
-                    <option value="tenth">10th</option>
-                    <option value="eleventh">11th</option>
-                    <option value="twelfth">12th</option>
-                  </select>
-                <button type="submit" id="submit">Register</button>
-            </form>
+        <div id="output" class="text-xl">
+        <?php
+            if ($_SERVER["REQUEST_METHOD"] == "POST"){
+                $name = $_POST["name"];
+                $school = $_POST["school"];
+                echo ("Thank you $name from $school in ");
+                if ($_POST["grade"]=="ninth") {
+                    echo ("ninth grade for");
+                } 
+                else if ($_POST["grade"]=="tenth") {
+                    echo ("tenth grade for");
+                }
+                else if($_POST["grade"]=="eleventh") {
+                    echo ("elevnth grade for");
+                }
+                else {
+                    echo ("twelfth grade for");
+                }
+               echo(" registering for the Marywood Math Contest. It will take place in April 2024.<br>");
+            }
+       ?>
         </div>
     </main>
     <footer class="flex pos-rel justify-center align-center">
