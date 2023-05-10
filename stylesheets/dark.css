@@ -15,6 +15,9 @@ body {
     color: #f0f0f0;
     background-color: #313030;
 }
+a:hover {
+    color:rgba(197, 197, 197, 0.867);
+}
 .flex {
     display: flex;
 }

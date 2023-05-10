@@ -13,7 +13,9 @@ body {
     min-height: 150vh;
     overflow-x: hidden;
 }
-
+a:hover {
+    color:rgba(38, 38, 38, 0.867);
+}
 .flex {
     display: flex;
 }
@@ -117,7 +119,7 @@ header {
 }
 li { /* get rid of the styling on the list*/
     list-style-type: none;
-    font-size: 2rem; /* font relative to the root size of 20px  */
+    font-size: 2rem; /* font relative to the root size of 20px  remember what rem is*/
 }
 #main-menu a {
     color: #1A5632;
