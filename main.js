@@ -3,10 +3,10 @@ function getStyles() {
     let y = document.getElementsByTagName("link")[0];
     let cssStyle= x.value;
     y.setAttribute("href", cssStyle);
-    if(cssStyle=== "./stylesheets/dark.css"){
-        localStorage.setItem("isDarkMode", true)
+    if(cssStyle === "./stylesheets/dark.css"){
+        localStorage.setItem("isDarkMode", 1);
     } else {
-        localStorage.setItem("isDarkMode", false)
+        localStorage.setItem("isDarkMode", 0);
     }
 }
 function randomcolor() {
@@ -42,17 +42,18 @@ function validateForm() {
     return retVal;
 }
 function load() {
-    let dark = false;
+    let dark = 0;
     if (typeof(Storage) !== "undefined") {
         if (localStorage.getItem("isDarkMode") !== null){
             dark = localStorage.getItem("isDarkMode");
         }               
     }
-    if (dark) {
-        var y = document.getElementsByTagName("link")[0];
-        y.setAttribute("href", "./stylesheets/dark.css")
+    let y = document.getElementsByTagName("link")[0];
+    if (dark==1) {
+        console.log(dark); 
+        y.setAttribute("href", "./stylesheets/dark.css");
     }
     else {
-        y.setAttribute("href", "./stylesheets/styles.css")
+        y.setAttribute("href", "./stylesheets/styles.css");
     }
 }
