@@ -212,7 +212,7 @@ main {
     height: auto;
 }
 #club-description {
-    background-image: url(../images/dark.webp);/*Photo by Scott Webb: https://www.pexels.com/photo/white-and-grey-surface-2824173/*/
+    background-image: url(../images/dark.webp);/* edited to invert colors Photo by Scott Webb: https://www.pexels.com/photo/white-and-grey-surface-2824173/*/
     background-size: cover;
     height: 75vh;
 }
@@ -337,7 +337,7 @@ main {
     display: inline-block;
     transition: background-color 0.6s ease;
 }
-.active, .dot:hover {
+.on, .dot:hover {
     background-color: #999;
 }
 /*footer

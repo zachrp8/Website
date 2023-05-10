@@ -1,33 +1,32 @@
-let slideIndex = 0;
-showSlides(slideIndex);
+let index = 0;
+show(index);
 
 // Next/previous controls
-function plusSlides(n) {
-    showSlides(slideIndex += n);
+function slideController(n) {
+    show(index += n);
 }
 
 // Thumbnail image controls
 function currentSlide(n) {
-    showSlides(slideIndex = n);
+    show(index = n);
 }
 
-function showSlides(n) {
+function show(n) {
     let i;
-    let slides = document.getElementsByClassName("box"); 
+    let boxes = document.getElementsByClassName("box"); //create array of boxes
     let dots = document.getElementsByClassName("dot");
-    if (n > slides.length-1) {
-        slideIndex = 0;
-        console.log(slides.length)
+    if (n > 6) {
+        index = 0;
     }
     if (n < 0) {
-        slideIndex = slides.length-1;
+        index = 6; // if the person clicks left and youre at the first slide go to the last one
     }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+    for (i = 0; i < 7; i++) { //hide the non active slides
+        boxes[i].style.display = "none";
     }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
+    for (i = 0; i < 7; i++) { //loop through the little dots
+        dots[i].className = dots[i].className.replace(" on", "");
     }
-    slides[slideIndex].style.display = "block";
-    dots[slideIndex].className += " active";
+    boxes[index].style.display = "block"; // show the slide we are on
+    dots[index].className += " on"; //highlight the correct dot
 }
